@@ -110,7 +110,7 @@
     * unconditionally on NEON instructions not crashing, otherwise we must
     * disable use of NEON instructions:
     */
-#  if defined(__ARM_NEON__) && !defined(IOS)
+#  if defined(__ARM_NEON__) && !defined(IOS) && !defined(MAEMO)
 #     define PNG_ARM_NEON_OPT 2
 #  else
 #     define PNG_ARM_NEON_OPT 0
